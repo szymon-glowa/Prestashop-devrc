@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="mojbudowlaniec" parallel="tests" thread-count="3">
+
+
+    <listeners>
+        <listener class-name="Uzytkownik.utils.testng.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Testowanie funkcjonalnośći użytkownika_CHROME">
+
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
+            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
+            <class name="Uzytkownik.tests.TestingContactForrm"/>
+            <class name="Uzytkownik.tests.TestingPurchase"/>
+        </classes>
+
+    </test>
+
+    <test name="Testowanie funkcjonalnośći użytkownika_EDGE">
+
+        <parameter name="browser" value="EDGE"/>
+        <classes>
+            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
+            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
+            <class name="Uzytkownik.tests.TestingContactForrm"/>
+            <class name="Uzytkownik.tests.TestingPurchase"/>
+
+        </classes>
+
+    </test>
+
+    <test name="Testowanie funkcjonalnośći użytkownika_FIREFOX">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
+            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
+            <class name="Uzytkownik.tests.TestingContactForrm"/>
+            <class name="Uzytkownik.tests.TestingPurchase"/>
+
+        </classes>
+    </test>
+
+
+
+
+
+</suite>

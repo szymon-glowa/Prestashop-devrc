@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="54.471" tests="7" errors="0" skipped="2" failures="5">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/szymonglowacki/Documents/Selenium-project/target/test-classes:/Users/szymonglowacki/Documents/Selenium-project/target/classes:/Users/szymonglowacki/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar:/Users/szymonglowacki/.m2/repository/io/github/bonigarcia/webdrivermanager/4.3.1/webdrivermanager-4.3.1.jar:/Users/szymonglowacki/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/szymonglowacki/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/szymonglowacki/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/szymonglowacki/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/szymonglowacki/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/szymonglowacki/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/szymonglowacki/.m2/repository/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.jar:/Users/szymonglowacki/.m2/repository/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-testng/2.10.0/allure-testng-2.10.0.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-java-commons/2.10.0/allure-java-commons-2.10.0.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-model/2.10.0/allure-model-2.10.0.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/szymonglowacki/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/szymonglowacki/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/szymonglowacki/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/szymonglowacki/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/szymonglowacki/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/szymonglowacki/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/szymonglowacki/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/szymonglowacki/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/szymonglowacki/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/szymonglowacki/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/szymonglowacki/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/szymonglowacki/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/szymonglowacki/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/szymonglowacki/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/maven/surefire/surefire-testng-utils/2.21.0/surefire-testng-utils-2.21.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.21.0/surefire-grouper-2.21.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="PL"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/szymonglowacki/Documents/Selenium-project/target/surefire/surefirebooter16044651748402840802.jar /Users/szymonglowacki/Documents/Selenium-project/target/surefire 2021-01-20T23-24-29_726-jvmRun1 surefire1112972362967412351tmp surefire_012641137464749341183tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/szymonglowacki/Documents/Selenium-project/target/test-classes:/Users/szymonglowacki/Documents/Selenium-project/target/classes:/Users/szymonglowacki/.m2/repository/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar:/Users/szymonglowacki/.m2/repository/io/github/bonigarcia/webdrivermanager/4.3.1/webdrivermanager-4.3.1.jar:/Users/szymonglowacki/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/szymonglowacki/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar:/Users/szymonglowacki/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0.3/httpclient5-5.0.3.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0.2/httpcore5-5.0.2.jar:/Users/szymonglowacki/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0.2/httpcore5-h2-5.0.2.jar:/Users/szymonglowacki/.m2/repository/commons-codec/commons-codec/1.13/commons-codec-1.13.jar:/Users/szymonglowacki/.m2/repository/org/rauschig/jarchivelib/1.1.0/jarchivelib-1.1.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar:/Users/szymonglowacki/.m2/repository/org/jsoup/jsoup/1.13.1/jsoup-1.13.1.jar:/Users/szymonglowacki/.m2/repository/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.jar:/Users/szymonglowacki/.m2/repository/org/aspectj/aspectjweaver/1.9.2/aspectjweaver-1.9.2.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-testng/2.10.0/allure-testng-2.10.0.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-java-commons/2.10.0/allure-java-commons-2.10.0.jar:/Users/szymonglowacki/.m2/repository/io/qameta/allure/allure-model/2.10.0/allure-model-2.10.0.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/szymonglowacki/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.jar:/Users/szymonglowacki/.m2/repository/org/apache/tika/tika-core/1.20/tika-core-1.20.jar:/Users/szymonglowacki/.m2/repository/org/jooq/joor-java-8/0.9.10/joor-java-8-0.9.10.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/szymonglowacki/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/szymonglowacki/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/szymonglowacki/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/szymonglowacki/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/szymonglowacki/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/szymonglowacki/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/szymonglowacki/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/szymonglowacki/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/szymonglowacki/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/szymonglowacki/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/szymonglowacki/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/szymonglowacki/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/szymonglowacki/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/szymonglowacki/.m2/repository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/maven/surefire/surefire-testng-utils/2.21.0/surefire-testng-utils-2.21.0.jar:/Users/szymonglowacki/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.21.0/surefire-grouper-2.21.0.jar:"/>
+    <property name="allure.results.directory" value="/Users/szymonglowacki/Documents/Selenium-project/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/szymonglowacki"/>
+    <property name="user.language" value="pl"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/szymonglowacki/Documents/Selenium-project"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/szymonglowacki/Documents/Selenium-project/target/surefire/surefirebooter16044651748402840802.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="14.0.1+14"/>
+    <property name="user.name" value="szymonglowacki"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.7"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/szymonglowacki/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/gf/ykpgdfzj0bv6v1sm6rlp7mcr0000gn/T/"/>
+    <property name="java.version" value="14.0.1"/>
+    <property name="user.dir" value="/Users/szymonglowacki/Documents/Selenium-project"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/szymonglowacki/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="N/A"/>
+    <property name="java.vm.version" value="14.0.1+14"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="TestowanieStrony" classname="Uzytkownik.tests.TestowanieStrony" time="3.704">
+    <failure message="Failed to decode response from marionette&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MacBook-Pro-Szymon.local&apos;, ip: &apos;fe80:0:0:0:c01:8d2a:f82a:53c9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;14.0.1&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: b20816e5-096a-a14c-a0e3-747000339b39" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b20816e5-096a-a14c-a0e3-747000339b39
+	at Uzytkownik.tests.TestowanieStrony.TestowanieStrony(TestowanieStrony.java:21)
+</failure>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:24:37.102 [TestNG-tests-2] Uzytkownik.configuration.PropertiesLoader - Trying to load properties with file name: configuration.properties
+[INFO ] 2021-01-20 23:24:37.102 [TestNG-tests-1] Uzytkownik.configuration.PropertiesLoader - Trying to load properties with file name: configuration.properties
+[INFO ] 2021-01-20 23:24:37.102 [TestNG-tests-3] Uzytkownik.configuration.PropertiesLoader - Trying to load properties with file name: configuration.properties
+[INFO ] 2021-01-20 23:24:37.115 [TestNG-tests-3] Uzytkownik.configuration.PropertiesLoader - Successfully loaded properties for file: configuration.properties
+[INFO ] 2021-01-20 23:24:37.115 [TestNG-tests-1] Uzytkownik.configuration.PropertiesLoader - Successfully loaded properties for file: configuration.properties
+[INFO ] 2021-01-20 23:24:37.115 [TestNG-tests-2] Uzytkownik.configuration.PropertiesLoader - Successfully loaded properties for file: configuration.properties
+[INFO ] 2021-01-20 23:24:39.434 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to navigate to https://mojbudowlaniec.pl/
+[INFO ] 2021-01-20 23:24:41.813 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - Trying to navigate to https://mojbudowlaniec.pl/
+[INFO ] 2021-01-20 23:25:07.141 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - Navigated to https://mojbudowlaniec.pl/
+[INFO ] 2021-01-20 23:25:07.229 [TestNG-tests-3] Uzytkownik.utils.testng.listeners.TestListener - Starting test: TestowanieStrony
+[INFO ] 2021-01-20 23:25:08.607 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Navigated to https://mojbudowlaniec.pl/
+[INFO ] 2021-01-20 23:25:08.609 [TestNG-tests-1] Uzytkownik.utils.testng.listeners.TestListener - Starting test: TestowanieStrony
+[INFO ] 2021-01-20 23:25:12.259 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - Trying to navigate to https://mojbudowlaniec.pl/dodaj-ogloszenie
+]]></system-out>
+    <system-err><![CDATA[[TestNG-tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 87.0.4280.88 (resolved driver for Chrome 87)
+[TestNG-tests-1] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/szymonglowacki/.cache/selenium/chromedriver/mac64/87.0.4280.88/chromedriver
+[TestNG-tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.29.0 (resolved driver for Firefox 84)
+[TestNG-tests-3] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/szymonglowacki/.cache/selenium/geckodriver/mac64/0.29.0/geckodriver
+1611181477927	geckodriver	INFO	Listening on 127.0.0.1:22337
+Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 3922
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+1611181478172	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gf/ykpgdfzj0bv6v1sm6rlp7mcr0000gn/T/rust_mozprofilePb4bcZ"
+[TestNG-tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Using msedgedriver 87.0.664.75 (resolved driver for Edge 87)
+[TestNG-tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Reading https://msedgedriver.azureedge.net/?restype=container&comp=list to seek msedgedriver
+sty 20, 2021 11:24:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[TestNG-tests-2] INFO io.github.bonigarcia.wdm.online.Downloader - Downloading https://msedgedriver.azureedge.net/87.0.664.75/edgedriver_mac64.zip
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611181481054	Marionette	INFO	Listening on port 54761
+1611181481176	Marionette	WARN	TLS certificate errors will be ignored for this session
+sty 20, 2021 11:24:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: chrome://browser/content/browser-safebrowsing.js, line 15: TypeError: gBrowser is undefined
+1611181511076	Marionette	INFO	Stopped listening on port 54761
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+]]></system-err>
+  </testcase>
+  <testcase name="TestowanieStrony" classname="Uzytkownik.tests.TestowanieStrony" time="3.711">
+    <failure message="Tried to run command without establishing a connection&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MacBook-Pro-Szymon.local&apos;, ip: &apos;fe80:0:0:0:c01:8d2a:f82a:53c9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;14.0.1&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: b20816e5-096a-a14c-a0e3-747000339b39" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: 
+Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b20816e5-096a-a14c-a0e3-747000339b39
+</failure>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:12.312 [TestNG-tests-3] Uzytkownik.utils.testng.listeners.TestListener - Test TestowanieStrony failed!
+[INFO ] 2021-01-20 23:25:12.315 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - Trying to get screenshot
+[INFO ] 2021-01-20 23:25:12.317 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - There was an exception with message: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b20816e5-096a-a14c-a0e3-747000339b39
+]]></system-out>
+  </testcase>
+  <testcase name="TestowanieStrony" classname="Uzytkownik.tests.TestowanieStrony" time="9.427">
+    <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=87.0.4280.141)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MacBook-Pro-Szymon.local&apos;, ip: &apos;fe80:0:0:0:c01:8d2a:f82a:53c9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;14.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 14686ae9858236dddf8ee1aab9db2948&#10;*** Element info: {Using=id, value=title}" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+*** Element info: {Using=id, value=title}
+	at Uzytkownik.tests.TestowanieStrony.TestowanieStrony(TestowanieStrony.java:42)
+</failure>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:12.319 [TestNG-tests-3] Uzytkownik.utils.testng.listeners.TestListener - Test TestowanieStrony failed!
+[INFO ] 2021-01-20 23:25:12.319 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - Trying to get screenshot
+[INFO ] 2021-01-20 23:25:12.322 [TestNG-tests-3] driver.manager.listeners.DriverEventListener - There was an exception with message: Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 84.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201221152838, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 21319, moz:profile: /var/folders/gf/ykpgdfzj0bv..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 19.6.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b20816e5-096a-a14c-a0e3-747000339b39
+[INFO ] 2021-01-20 23:25:13.615 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to navigate to https://mojbudowlaniec.pl/dodaj-ogloszenie
+[INFO ] 2021-01-20 23:25:14.224 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Navigated to https://mojbudowlaniec.pl/dodaj-ogloszenie
+[INFO ] 2021-01-20 23:25:14.308 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: //*[@id='navbarSupportedContent']/ul[2]/div/a[2]
+[INFO ] 2021-01-20 23:25:14.323 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: //*[@id='navbarSupportedContent']/ul[2]/div/a[2]
+[INFO ] 2021-01-20 23:25:14.333 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: a
+[INFO ] 2021-01-20 23:25:14.807 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:14.807 [TestNG-tests-1] Uzytkownik.page.objects.TestCase1 - Kliknięcie w zakładke 'Dodaj ogłsozenie'
+[INFO ] 2021-01-20 23:25:14.810 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.821 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.826 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.835 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.857 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.864 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.883 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.893 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.898 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.905 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.914 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.922 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:14.938 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.945 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:14.946 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: .//option[@value = "1"]
+[INFO ] 2021-01-20 23:25:14.965 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: .//option[@value = "1"]
+[INFO ] 2021-01-20 23:25:14.976 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: option
+[INFO ] 2021-01-20 23:25:15.028 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:15.028 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wybieram Opcje Dach
+[INFO ] 2021-01-20 23:25:15.028 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:15.036 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:15.036 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: .//option[@value = "2"]
+[INFO ] 2021-01-20 23:25:15.046 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: .//option[@value = "2"]
+[INFO ] 2021-01-20 23:25:15.060 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: option
+[INFO ] 2021-01-20 23:25:15.095 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:15.095 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wybieram Podkategorie Budowa dachu
+[INFO ] 2021-01-20 23:25:15.096 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: title
+[INFO ] 2021-01-20 23:25:15.109 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: title
+[INFO ] 2021-01-20 23:25:15.113 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [Budowanie dachu]
+[INFO ] 2021-01-20 23:25:15.226 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [Budowanie dachu]
+[INFO ] 2021-01-20 23:25:15.226 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy w tytuł 'Budowanie dachu'
+[INFO ] 2021-01-20 23:25:15.226 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: description
+[INFO ] 2021-01-20 23:25:15.239 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: description
+[INFO ] 2021-01-20 23:25:15.244 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: textarea text [Dach do postawienia dla nowego domu]
+[INFO ] 2021-01-20 23:25:15.321 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: textarea text [Dach do postawienia dla nowego domu]
+[INFO ] 2021-01-20 23:25:15.321 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy w Opis 'Dach do postawienia dla nowego domu'
+[INFO ] 2021-01-20 23:25:15.322 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.cssSelector: button[class='btn btn-primary gradient big']
+[INFO ] 2021-01-20 23:25:15.332 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.cssSelector: button[class='btn btn-primary gradient big']
+[INFO ] 2021-01-20 23:25:15.337 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: button
+[INFO ] 2021-01-20 23:25:15.382 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:15.382 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Klikamy dalej
+[INFO ] 2021-01-20 23:25:15.382 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: budget
+[INFO ] 2021-01-20 23:25:15.414 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: budget
+[INFO ] 2021-01-20 23:25:15.418 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [10000]
+[INFO ] 2021-01-20 23:25:15.474 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [10000]
+[INFO ] 2021-01-20 23:25:15.475 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy w pole 'Budżet' 10000
+[INFO ] 2021-01-20 23:25:15.475 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: localization
+[INFO ] 2021-01-20 23:25:15.486 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: localization
+[INFO ] 2021-01-20 23:25:15.491 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [Kalisz]
+[INFO ] 2021-01-20 23:25:15.548 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [Kalisz]
+[INFO ] 2021-01-20 23:25:15.548 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: /html/body/div[2]/div[1]
+[INFO ] 2021-01-20 23:25:15.569 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - There was an exception with message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div[1]"}
+  (Session info: chrome=87.0.4280.141)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+*** Element info: {Using=xpath, value=/html/body/div[2]/div[1]}
+[INFO ] 2021-01-20 23:25:16.071 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: /html/body/div[2]/div[1]
+[INFO ] 2021-01-20 23:25:16.078 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: /html/body/div[2]/div[1]
+[INFO ] 2021-01-20 23:25:16.090 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: /html/body/div[2]/div[1]
+[INFO ] 2021-01-20 23:25:16.101 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: /html/body/div[2]/div[1]
+[INFO ] 2021-01-20 23:25:16.105 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: div
+[INFO ] 2021-01-20 23:25:16.153 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:16.153 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy w pole 'Lokalizacja' Kalisz, oraz wybieramy :Polska
+[INFO ] 2021-01-20 23:25:16.153 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: address
+[INFO ] 2021-01-20 23:25:16.165 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: address
+[INFO ] 2021-01-20 23:25:16.169 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [ul.Kaliska 12b]
+[INFO ] 2021-01-20 23:25:16.246 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [ul.Kaliska 12b]
+[INFO ] 2021-01-20 23:25:16.247 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy w pole 'Adres' adres firmy
+[INFO ] 2021-01-20 23:25:16.247 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: register-button
+[INFO ] 2021-01-20 23:25:16.257 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: register-button
+[INFO ] 2021-01-20 23:25:16.263 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: button
+[INFO ] 2021-01-20 23:25:16.298 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:16.298 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Klikamy w opcje 'Zarejestruj się'
+[INFO ] 2021-01-20 23:25:16.298 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: name
+[INFO ] 2021-01-20 23:25:16.312 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: name
+[INFO ] 2021-01-20 23:25:16.316 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [12345]
+[INFO ] 2021-01-20 23:25:16.383 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [12345]
+[INFO ] 2021-01-20 23:25:16.384 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy login
+[INFO ] 2021-01-20 23:25:16.384 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: email
+[INFO ] 2021-01-20 23:25:16.398 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: email
+[INFO ] 2021-01-20 23:25:16.402 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [wiechu02wp.pl]
+[INFO ] 2021-01-20 23:25:16.458 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [wiechu02wp.pl]
+[INFO ] 2021-01-20 23:25:16.458 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy email
+[INFO ] 2021-01-20 23:25:16.458 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: phone
+[INFO ] 2021-01-20 23:25:16.468 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: phone
+[INFO ] 2021-01-20 23:25:16.473 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [123456789]
+[INFO ] 2021-01-20 23:25:16.528 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [123456789]
+[INFO ] 2021-01-20 23:25:16.528 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy numer telefonu
+[INFO ] 2021-01-20 23:25:16.529 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: password
+[INFO ] 2021-01-20 23:25:16.538 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: password
+[INFO ] 2021-01-20 23:25:16.542 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [Wielkamala]
+[INFO ] 2021-01-20 23:25:16.592 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [Wielkamala]
+[INFO ] 2021-01-20 23:25:16.593 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy haslo
+[INFO ] 2021-01-20 23:25:16.593 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: password_confirmation
+[INFO ] 2021-01-20 23:25:16.611 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: password_confirmation
+[INFO ] 2021-01-20 23:25:16.621 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to type into element: input text [Wielkamala]
+[INFO ] 2021-01-20 23:25:16.674 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Typed into element: input text [Wielkamala]
+[INFO ] 2021-01-20 23:25:16.674 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wpisujemy ponownie haslo
+[INFO ] 2021-01-20 23:25:16.674 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: /html/body/div[1]/main/div[2]/div/form/div[4]/div[6]/div/button
+[INFO ] 2021-01-20 23:25:16.684 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: /html/body/div[1]/main/div[2]/div/form/div[4]/div[6]/div/button
+[INFO ] 2021-01-20 23:25:16.688 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: button
+[INFO ] 2021-01-20 23:25:17.603 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:17.603 [TestNG-tests-1] Uzytkownik.page.objects.TestCase2 - Wysyłamy formularz
+[INFO ] 2021-01-20 23:25:17.604 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.614 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.618 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.624 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.632 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.638 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.650 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.657 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.661 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.668 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.675 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.681 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.695 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.701 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: category_selector
+[INFO ] 2021-01-20 23:25:17.701 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: .//option[@value = "128"]
+[INFO ] 2021-01-20 23:25:17.712 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: .//option[@value = "128"]
+[INFO ] 2021-01-20 23:25:17.722 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: option
+[INFO ] 2021-01-20 23:25:17.775 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:17.776 [TestNG-tests-1] Uzytkownik.page.objects.TestCase3 - Wybieram Opcje 'Sprzątanie'
+[INFO ] 2021-01-20 23:25:17.776 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.782 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.id: order_category
+[INFO ] 2021-01-20 23:25:17.782 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.xpath: .//option[@value = "129"]
+[INFO ] 2021-01-20 23:25:17.792 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Found element with locator By.xpath: .//option[@value = "129"]
+[INFO ] 2021-01-20 23:25:17.802 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to click on element with tag name: option
+[INFO ] 2021-01-20 23:25:18.029 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Clicked on element
+[INFO ] 2021-01-20 23:25:18.030 [TestNG-tests-1] Uzytkownik.page.objects.TestCase3 - Wybieram Podkategorie 'Usługi porządkowe'
+[INFO ] 2021-01-20 23:25:18.030 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to find element with locator By.id: title
+[INFO ] 2021-01-20 23:25:18.033 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - There was an exception with message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+*** Element info: {Using=id, value=title}
+]]></system-out>
+  </testcase>
+  <testcase name="TestowanieStrony" classname="Uzytkownik.tests.TestowanieStrony" time="9.431">
+    <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=87.0.4280.141)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;MacBook-Pro-Szymon.local&apos;, ip: &apos;fe80:0:0:0:c01:8d2a:f82a:53c9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;14.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 14686ae9858236dddf8ee1aab9db2948" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+</failure>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:18.035 [TestNG-tests-1] Uzytkownik.utils.testng.listeners.TestListener - Test TestowanieStrony failed!
+[INFO ] 2021-01-20 23:25:18.035 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to get screenshot
+[INFO ] 2021-01-20 23:25:18.037 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - There was an exception with message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+]]></system-out>
+  </testcase>
+  <testcase name="TestowanieStrony" classname="Uzytkownik.tests.TestowanieStrony" time="0">
+    <skipped message="The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html"/>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:24.890 [TestNG-tests-2] Uzytkownik.utils.testng.listeners.TestListener - Starting test: TestowanieStrony
+]]></system-out>
+  </testcase>
+  <testcase name="beforeTest" classname="Uzytkownik.tests.TestowanieStrony" time="11.27">
+    <failure message="The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html
+</failure>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:18.038 [TestNG-tests-1] Uzytkownik.utils.testng.listeners.TestListener - Test TestowanieStrony failed!
+[INFO ] 2021-01-20 23:25:18.038 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - Trying to get screenshot
+[INFO ] 2021-01-20 23:25:18.041 [TestNG-tests-1] driver.manager.listeners.DriverEventListener - There was an exception with message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=87.0.4280.141)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MacBook-Pro-Szymon.local', ip: 'fe80:0:0:0:c01:8d2a:f82a:53c9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: /var/folders/gf/ykpgdfzj0bv...}, goog:chromeOptions: {debuggerAddress: localhost:54766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 14686ae9858236dddf8ee1aab9db2948
+]]></system-out>
+    <system-err><![CDATA[[TestNG-tests-2] INFO io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file edgedriver_mac64.zip
+[TestNG-tests-2] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.edge.driver as /Users/szymonglowacki/.cache/selenium/msedgedriver/mac64/87.0.664.75/msedgedriver
+]]></system-err>
+  </testcase>
+  <testcase name="afterTest" classname="Uzytkownik.tests.TestowanieStrony" time="0">
+    <skipped/>
+    <system-out><![CDATA[[INFO ] 2021-01-20 23:25:24.893 [TestNG-tests-2] Uzytkownik.utils.testng.listeners.TestListener - Test TestowanieStrony skipped!
+]]></system-out>
+  </testcase>
+</testsuite>

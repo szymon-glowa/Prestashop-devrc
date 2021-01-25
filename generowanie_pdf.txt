@@ -1,0 +1,9 @@
+allure-docx --pdf --detail-level full allure-results raport.docx
+
+allure-docx --pdf --detail-level  full_failed allure-results raport1.docx
+
+allure-docx allure-results test.docx
+
+--na koncu to : 
+
+allure-docx --pdf --title="Rc Cloud" --logo=C:\rcc_logo.png --detail-level full allure-results raport1.docx
