@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="mojbudowlaniec" parallel="tests" thread-count="3">
+<suite name="prestashop" parallel="tests" thread-count="3">
 
 
     <listeners>
@@ -8,38 +8,37 @@
     </listeners>
 
     <test name="Testowanie funkcjonalnośći użytkownika_CHROME">
-
         <parameter name="browser" value="CHROME"/>
+        <parameter name="email" value="Test1@poczta.pl"/>
+        <parameter name="email1" value="Test4@poczta.pl"/>
+        <parameter name="email2" value="Test7@poczta.pl"/>
+        <parameter name="password" value="haslo1234"/>
         <classes>
-            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
-            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
-            <class name="Uzytkownik.tests.TestingContactForrm"/>
-            <class name="Uzytkownik.tests.TestingPurchase"/>
+            <class name="Uzytkownik.tests.AllTests"/>
         </classes>
 
     </test>
 
     <test name="Testowanie funkcjonalnośći użytkownika_EDGE">
-
         <parameter name="browser" value="EDGE"/>
+        <parameter name="email" value="Test2@poczta.pl"/>
+        <parameter name="email1" value="Test5@poczta.pl"/>
+        <parameter name="email2" value="Test8@poczta.pl"/>
+        <parameter name="password" value="haslo1234"/>
         <classes>
-            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
-            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
-            <class name="Uzytkownik.tests.TestingContactForrm"/>
-            <class name="Uzytkownik.tests.TestingPurchase"/>
-
+            <class name="Uzytkownik.tests.AllTests"/>
         </classes>
 
     </test>
 
     <test name="Testowanie funkcjonalnośći użytkownika_FIREFOX">
         <parameter name="browser" value="FIREFOX"/>
+        <parameter name="email" value="Test3@poczta.pl"/>
+        <parameter name="email1" value="Test6@poczta.pl"/>
+        <parameter name="email2" value="Test9@poczta.pl"/>
+        <parameter name="password" value="haslo1234"/>
         <classes>
-            <class name="Uzytkownik.tests.TestingViewAndSearch"/>
-            <class name="Uzytkownik.tests.TestingRegistrationAndLogin"/>
-            <class name="Uzytkownik.tests.TestingContactForrm"/>
-            <class name="Uzytkownik.tests.TestingPurchase"/>
-
+            <class name="Uzytkownik.tests.AllTests"/>
         </classes>
     </test>
 

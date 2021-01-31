@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class TestCase9 extends BasePage  {
+public class TestCase9 extends BasePage {
     @FindBy(xpath = "//*[@id=\"category-3\"]/a")
     private WebElement clothes;
     @FindBy(xpath = "//*[@id=\"js-product-list\"]/div[1]/div[1]/article/div/a/img")
@@ -67,11 +67,13 @@ public class TestCase9 extends BasePage  {
     private WebElement ButtonAgree;
     @FindBy(xpath = "//*[@id=\"payment-confirmation\"]/div[1]/button")
     private WebElement ButtonSubmitYourOrder;
-
+    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[1]")
+    private WebElement LogOut;
 
     @Step("Próba zakup produktu prostego [Zakup i zalogowanie przy kupowaniu]")
-    public TestCase9 ProductPurchaseWithLogin() {
-
+    public TestCase9 ProductPurchaseWithLogin(String email, String password) throws InterruptedException {
+        LogOut.click();
+        log().info("Wylogowanie się");
         clothes.click();
         log().info("Kliknięcie w zakładke 'clothes'");
         HummingbirdPrintedTShirt.click();
@@ -81,26 +83,29 @@ public class TestCase9 extends BasePage  {
         WaitForElement.waitUntilElementIsVisible(GoToOrder);
         GoToOrder.click();
         log().info("Kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
+        WaitForElement.waitUntilElementIsVisible(GoToOrderAgain);
         GoToOrderAgain.click();
         log().info("Ponowne kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
+        WaitForElement.waitUntilElementIsVisible(SignIn);
         SignIn.click();
         log().info("kliknięcie w zakładke 'Zaloguj się'");
         InputTypeEmail.clear();
-        InputTypeEmail.sendKeys(TestCase6.email);
+        InputTypeEmail.sendKeys(email);
         log().info("Wpisujemy email");
         InputTypePassword.clear();
-        InputTypePassword.sendKeys("haslo1234");
+        InputTypePassword.sendKeys(password);
         log().info("Wpisujemy hasło");
         ButtonNext.click();
         log().info("Klikamy w przycisk 'Dalej'");
+        Uspij();
         InputAlias.clear();
         InputAlias.sendKeys("poczta.email@poczta.pl");
         log().info("Wpisujemy Alias");
         InputFirstName.clear();
-        InputFirstName.sendKeys(TestCase6.firstname);
+        InputFirstName.sendKeys("Jan");
         log().info("Wpisujemy Imię");
         InputLastName.clear();
-        InputLastName.sendKeys(TestCase6.lastname);
+        InputLastName.sendKeys("Kowalski");
         log().info("Wpisujemy Nazwisko");
         InputCompany.clear();
         InputCompany.sendKeys("Rc-cloud");

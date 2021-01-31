@@ -1,5 +1,6 @@
 package Uzytkownik.page.objects;
 
+import Uzytkownik.waits.WaitForElement;
 import com.github.javafaker.Faker;
 import driver.manager.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -14,21 +15,21 @@ public abstract class BasePage {
 
     private Logger logger = LogManager.getLogger(this.getClass().getName());
 
-    public Faker faker = new Faker(new Locale("pl"));
-    public Random random=new Random();
-    public int rand=random.nextInt(50);
+    public static Faker faker = new Faker(new Locale("pl"));
+    public static Random random=new Random();
+    public static int rand=random.nextInt(50);
 
-    public String getFakerFirstName() {
+    public static String getFakerFirstName() {
         String firstname=faker.name().firstName();
         return firstname;
     }
 
-    public String getFakerLastName() {
+    public static String getFakerLastName() {
         String lastname=faker.name().lastName();
         return lastname;
     }
 
-    public String getFakerEmail() {
+    public static String getFakerEmail() {
         String email=faker.name().firstName()+rand+"@gamil.com";
         return email;
     }
@@ -40,6 +41,8 @@ public abstract class BasePage {
     protected Logger log() {
         return logger;
     }
+
+   public  WaitForElement waitForElement = new WaitForElement();
 
     public void Uspij() throws InterruptedException {
         TimeUnit.SECONDS.sleep(2);

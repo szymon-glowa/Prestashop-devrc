@@ -19,35 +19,29 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-
-    public static WebDriver driver;
-
-
-
-
     @Step("Ładowanie konfiguracji z configuration.properties")
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         PropertiesLoader propertiesLoader = new PropertiesLoader();
         Properties propertiesFromFile = propertiesLoader.getPropertiesFromFile("configuration.properties");
         ConfigurationProperties.setProperties(propertiesFromFile);
 
     }
+
     @Parameters("browser")
     @Step("Konfigurowanie przeglądarki oraz przejśćie do strony głównej")
     @BeforeMethod
-    public void beforeTest(@Optional BrowserType browserType){
-
+    public void beforeTest(@Optional BrowserType browserType) {
         DriverManager.setWebDriver(browserType);
         DriverManager.getWebDriver();
         DriverUtils.setInitialConfiguration();
         DriverUtils.navigateTo(APPLICATION_URL);
-
+        DriverManager.getWebDriver().navigate().to(DriverManager.getWebDriver().getCurrentUrl());
     }
 
     @Step("Utylizacja przeglądarki")
     @AfterMethod
-    public void afterTest(){
+    public void afterTest() {
         DriverManager.disposeDriver();
 
     }

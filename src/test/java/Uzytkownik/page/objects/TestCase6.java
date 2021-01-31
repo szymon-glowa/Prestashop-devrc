@@ -11,12 +11,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Parameters;
 
 
 public class TestCase6 extends BasePage {
-    public static String firstname;
-    public static String lastname;
-    public static String email;
 
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
     private WebElement SignIn;
@@ -59,7 +57,7 @@ public class TestCase6 extends BasePage {
 
 
     @Step("Rejestracja użytkownika")
-    public TestCase7 UserRegistration() throws InterruptedException {
+    public TestCase7 UserRegistration(String email, String password) throws InterruptedException {
 
         SignIn.click();
         log().info("Przejśćie do logowania");
@@ -71,23 +69,20 @@ public class TestCase6 extends BasePage {
         log().info("Wybór pola 'Nazwa kontaktu' -> 'Pan'");
 
         InputFirstName.clear();
-        firstname=getFakerFirstName();
-        InputFirstName.sendKeys(firstname);
+        InputFirstName.sendKeys("Jan");
         log().info("Wpisujemy w pole 'Imię'");
 
         InputLastName.clear();
-        lastname=getFakerLastName();
-        InputLastName.sendKeys(lastname);
+        InputLastName.sendKeys("Kowalski");
         log().info("Wpisujemy w pole 'Nazwisko'");
 
         InputEmail.clear();
-        email=getFakerEmail();
         InputEmail.sendKeys(email);
-        log().info("Wpisujemy w pole 'E-mail' -> 'JanKowalski@poczta.pl'");
+        log().info("Wpisujemy w pole 'E-mail'");
 
         InputPassword.clear();
-        InputPassword.sendKeys("haslo1234");
-        log().info("Wpisujemy w pole 'Hasło' -> 'haslo1234'");
+        InputPassword.sendKeys(password);
+        log().info("Wpisujemy w pole 'Hasło'");
 
         InputDateOfBirth.clear();
         InputDateOfBirth.sendKeys("1970-05-31");

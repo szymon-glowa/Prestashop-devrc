@@ -19,6 +19,7 @@ public class BrowserFactory {
 
     //Konstruktor dla klasy, który ustawia wartości pól browserType or isRemoteRun
     public BrowserFactory(BrowserType browserType ){
+
         this.browserType = browserType;
     }
 

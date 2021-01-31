@@ -37,45 +37,57 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-mojbudowlaniec" class="panel mojbudowlaniec">
-        </div> <!-- panel mojbudowlaniec -->
-        <div panel-name="test-xml-mojbudowlaniec" class="panel">
+        <div panel-name="suite-prestashop" class="panel prestashop">
+        </div> <!-- panel prestashop -->
+        <div panel-name="test-xml-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/szymonglowacki/Documents/Selenium-project/src/test/resources/all_tests_suite.xml</span>
+            <span class="header-content">/Users/szymonglowacki/Documents/Prestashop-devrc/src/test/resources/all_tests_suite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;mojbudowlaniec&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;prestashop&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Uzytkownik.utils.testng.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Testowanie funkcjonalnośći użytkownika_CHROME&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;email2&quot; value=&quot;Test7@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;email1&quot; value=&quot;Test4@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;haslo1234&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;CHROME&quot;/&gt;
+    &lt;parameter name=&quot;email&quot; value=&quot;Test1@poczta.pl&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Uzytkownik.tests.TestowanieStrony&quot;/&gt;
+      &lt;class name=&quot;Uzytkownik.tests.AllTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Testowanie funkcjonalnośći użytkownika_CHROME --&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Testowanie funkcjonalnośći użytkownika_EDGE&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;email2&quot; value=&quot;Test8@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;email1&quot; value=&quot;Test5@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;haslo1234&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;EDGE&quot;/&gt;
+    &lt;parameter name=&quot;email&quot; value=&quot;Test2@poczta.pl&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Uzytkownik.tests.TestowanieStrony&quot;/&gt;
+      &lt;class name=&quot;Uzytkownik.tests.AllTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Testowanie funkcjonalnośći użytkownika_EDGE --&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Testowanie funkcjonalnośći użytkownika_FIREFOX&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;email2&quot; value=&quot;Test9@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;email1&quot; value=&quot;Test6@poczta.pl&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;haslo1234&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;FIREFOX&quot;/&gt;
+    &lt;parameter name=&quot;email&quot; value=&quot;Test3@poczta.pl&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Uzytkownik.tests.TestowanieStrony&quot;/&gt;
+      &lt;class name=&quot;Uzytkownik.tests.AllTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Testowanie funkcjonalnośći użytkownika_FIREFOX --&gt;
-&lt;/suite&gt; &lt;!-- mojbudowlaniec --&gt;
+&lt;/suite&gt; &lt;!-- prestashop --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-mojbudowlaniec" class="panel">
+        <div panel-name="testlist-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for mojbudowlaniec</span>
+            <span class="header-content">Tests for prestashop</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -91,59 +103,59 @@
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-mojbudowlaniec" class="panel">
+        <div panel-name="group-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for mojbudowlaniec</span>
+            <span class="header-content">Groups for prestashop</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-mojbudowlaniec" class="panel">
+        <div panel-name="times-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for mojbudowlaniec</span>
+            <span class="header-content">Times for prestashop</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_mojbudowlaniec');
-function tableData_mojbudowlaniec() {
+suiteTableInitFunctions.push('tableData_prestashop');
+function tableData_prestashop() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(0);
-window.suiteTableData['mojbudowlaniec']= { tableData: data, tableDiv: 'times-div-mojbudowlaniec'}
+window.suiteTableData['prestashop']= { tableData: data, tableDiv: 'times-div-prestashop'}
 return data;
 }
               </script>
               <span class="suite-total-time">Total running time: 0 ms</span>
-              <div id="times-div-mojbudowlaniec">
-              </div> <!-- times-div-mojbudowlaniec -->
+              <div id="times-div-prestashop">
+              </div> <!-- times-div-prestashop -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-mojbudowlaniec" class="panel">
+        <div panel-name="reporter-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for mojbudowlaniec</span>
+            <span class="header-content">Reporter output for prestashop</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-mojbudowlaniec" class="panel">
+        <div panel-name="ignored-methods-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-mojbudowlaniec" class="panel">
+        <div panel-name="chronological-prestashop" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Uzytkownik.tests.TestowanieStrony</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Uzytkownik.tests.AllTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
@@ -158,34 +170,42 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest(CHROME)</span>
-                <span class="method-start">73 ms</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest(EDGE)</span>
-                <span class="method-start">73 ms</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest(FIREFOX)</span>
-                <span class="method-start">73 ms</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TestowanieStrony</span>
-                <span class="method-start">18186 ms</span>
+                <span class="method-name">Test(Test3@poczta.pl, Test6@poczta.pl, Test9@poczta.pl, haslo1234)</span>
+                <span class="method-start">16819 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TestowanieStrony</span>
-                <span class="method-start">20521 ms</span>
+                <span class="method-name">Test(Test2@poczta.pl, Test5@poczta.pl, Test8@poczta.pl, haslo1234)</span>
+                <span class="method-start">17871 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TestowanieStrony</span>
-                <span class="method-start">21914 ms</span>
+                <span class="method-name">Test(Test1@poczta.pl, Test4@poczta.pl, Test7@poczta.pl, haslo1234)</span>
+                <span class="method-start">34520 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">52876 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">70615 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

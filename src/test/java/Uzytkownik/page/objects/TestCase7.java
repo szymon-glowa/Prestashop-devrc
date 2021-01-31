@@ -1,17 +1,11 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.tests.TestBase;
 import Uzytkownik.waits.WaitForElement;
-import driver.manager.DriverManager;
-import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Parameters;
 
 
 public class TestCase7 extends BasePage  {
@@ -31,24 +25,24 @@ public class TestCase7 extends BasePage  {
     private WebElement ButtonSignIn;
 
     @Step("Logowanie użytkownika")
-    public TestCase7 UserLogin() throws InterruptedException {
+    public TestCase7 UserLogin(String email, String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
 
         SignIn.click();
         log().info("Przejśćie do logowania");
-
+        WaitForElement.waitUntilElementIsVisible(InputLoginEmail);
         InputLoginEmail.clear();
-        InputLoginEmail.sendKeys(TestCase6.email);
+        InputLoginEmail.sendKeys(email);
         log().info("Wpisujemy w pole logowania 'E-mail'");
-
+        Uspij();
         InputLoginPassword.clear();
-        InputLoginPassword.sendKeys("haslo1234");
+        InputLoginPassword.sendKeys(password);
         log().info("Wpisujemy w pole logowania 'Hasło' -> 'haslo1234'");
-
         Uspij();
         ButtonSignIn.click();
         log().info("Kliknięcie przycisku 'ZALOGUJ SIĘ'");
+        Uspij();
 
         return this;
     }

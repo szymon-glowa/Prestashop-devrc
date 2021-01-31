@@ -14,9 +14,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class TestCase12 extends BasePage {
-    public  String firstname2;
-    public  String lastname2;
-    public  String email2;
     @FindBy(xpath = "//*[@id=\"category-3\"]/a")
     private WebElement clothes;
     @FindBy(xpath = "//*[@id=\"js-product-list\"]/div[1]/div[1]/article/div/a/img")
@@ -45,7 +42,6 @@ public class TestCase12 extends BasePage {
     private WebElement ClickAccept;
     @FindBy(xpath = "//*[@id=\"customer-form\"]/footer/button")
     private WebElement ButtonNext;
-
     @FindBy(xpath = "//*[@id=\"delivery-address\"]/div/section/div[1]/div[1]/input")
     private WebElement InputAlias;
     @FindBy(xpath = "//*[@id=\"delivery-address\"]/div/section/div[2]/div[1]/input")
@@ -80,8 +76,13 @@ public class TestCase12 extends BasePage {
     private WebElement ButtonAgree;
     @FindBy(xpath = "//*[@id=\"payment-confirmation\"]/div[1]/button")
     private WebElement ButtonSubmitYourOrder;
+    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[1]")
+    private WebElement LogOut;
+
     @Step("Próba zakup produktu prostego [Zakup i rejestracja podczas zakupu]")
-    public TestCase12 ProductPurchaseAsGuestWithRegistration() throws InterruptedException {
+    public TestCase12 ProductPurchaseAsGuestWithRegistration(String email2,String password) throws InterruptedException {
+        LogOut.click();
+        log().info("Wylogowanie się");
         clothes.click();
         log().info("Kliknięcie w zakładke 'clothes'");
         HummingbirdPrintedTShirt.click();
@@ -97,19 +98,16 @@ public class TestCase12 extends BasePage {
         ChooseSex.click();
         log().info("Wybranie nazwy kontatku 'Pan'");
         InputFirstName1.clear();
-        firstname2=getFakerFirstName();
-        InputFirstName1.sendKeys(firstname2);
+        InputFirstName1.sendKeys("Jan");
         log().info("Wpisujemy Imię");
         InputLastName1.clear();
-        lastname2=getFakerLastName();
-        InputLastName1.sendKeys(lastname2);
+        InputLastName1.sendKeys("Kowalski");
         log().info("Wpisujemy Nazwisko");
         InputEmial.clear();
-        email2=getFakerEmail();
         InputEmial.sendKeys(email2);
         log().info("Wpisujemy adres");
         InputPassword.clear();
-        InputPassword.sendKeys("haslo1234");
+        InputPassword.sendKeys(password);
         log().info("Wpisujemy hasło");
         InputDateOfBirth.clear();
         InputDateOfBirth.sendKeys("1971-04-14");
@@ -125,10 +123,10 @@ public class TestCase12 extends BasePage {
         InputAlias.sendKeys("poczta.email@poczta.pl");
         log().info("Wpisujemy Alias");
         InputFirstName.clear();
-        InputFirstName.sendKeys(firstname2);
+        InputFirstName.sendKeys("Jan");
         log().info("Wpisujemy Imię");
         InputLastName.clear();
-        InputLastName.sendKeys(lastname2);
+        InputLastName.sendKeys("Kowalski");
         log().info("Wpisujemy Nazwisko");
         InputCompany.clear();
         InputCompany.sendKeys("Rc-cloud");

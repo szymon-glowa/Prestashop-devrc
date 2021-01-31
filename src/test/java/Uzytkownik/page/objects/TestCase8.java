@@ -26,17 +26,17 @@ public class TestCase8 extends BasePage  {
     private WebElement ButtonSend;
 
     @Step("Walidacja formularza kontaktowego")
-    public TestCase8 ContactForm() throws InterruptedException {
+    public TestCase8 ContactForm(String email) throws InterruptedException {
         WaitForElement waitForElement = new WaitForElement();
-
         Contact.click();
         log().info("Przejście do formularza kontaktowego");
         Select selectOptions = new Select(TopicSelector);
         WaitForElement.waitUntilElementIsVisible(TopicSelector);
         selectOptions.selectByValue("1");
         log().info("Wybieram Opcje 'Webmaster'");
+        Uspij();
         InputAdresEmail.clear();
-        InputAdresEmail.sendKeys(TestCase6.email);
+        InputAdresEmail.sendKeys(email);
         log().info("Wpisujemy w pole  'E-mail'");
         TextArea.clear();
         TextArea.sendKeys("Wiadomość tekstowa");

@@ -14,10 +14,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class TestCase10 extends BasePage {
-    public  String firstname1;
-    public  String lastname1;
-    public  String email1;
-
     @FindBy(xpath = "//*[@id=\"category-3\"]/a")
     private WebElement clothes;
     @FindBy(xpath = "//*[@id=\"js-product-list\"]/div[1]/div[1]/article/div/a/img")
@@ -75,9 +71,12 @@ public class TestCase10 extends BasePage {
     private WebElement ButtonAgree;
     @FindBy(xpath = "//*[@id=\"payment-confirmation\"]/div[1]/button")
     private WebElement ButtonSubmitYourOrder;
-
+    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[1]")
+    private WebElement LogOut;
     @Step("Próba zakup produktu prostego [Zakup jako gość]")
-    public TestCase10 ProductPurchaseAsGuest() throws InterruptedException {
+    public TestCase10 ProductPurchaseAsGuest(String email1) throws InterruptedException {
+        LogOut.click();
+        log().info("Wylogowanie się");
         clothes.click();
         log().info("Kliknięcie w zakładke 'clothes'");
         HummingbirdPrintedTShirt.click();
@@ -89,19 +88,16 @@ public class TestCase10 extends BasePage {
         log().info("Kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
         GoToOrderAgain.click();
         log().info("Ponowne kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
-
+        WaitForElement.waitUntilElementIsVisible(ChooseSex);
         ChooseSex.click();
         log().info("Wybranie nazwy kontatku 'Pan'");
         InputFirstName.clear();
-        firstname1=getFakerFirstName();
-        InputFirstName.sendKeys(firstname1);
+        InputFirstName.sendKeys("Jan");
         log().info("Wpisujemy Imię");
         InputLastName.clear();
-        lastname1=getFakerLastName();
-        InputLastName.sendKeys(lastname1);
+        InputLastName.sendKeys("Kowalski");
         log().info("Wpisujemy Nazwisko");
         InputEmial.clear();
-        email1=getFakerEmail();
         InputEmial.sendKeys(email1);
         log().info("Wpisujemy adres E-mail");
         ClickMessages.click();
@@ -112,10 +108,10 @@ public class TestCase10 extends BasePage {
         log().info("Kliknięcie w przycisk 'Dalej'");
 
         InputFirstName1.clear();
-        InputFirstName1.sendKeys(firstname1);
+        InputFirstName1.sendKeys("Jan");
         log().info("Wpisujemy Imię");
         InputLastName1.clear();
-        InputLastName1.sendKeys(lastname1);
+        InputLastName1.sendKeys("Kowalski");
         log().info("Wpisujemy Nazwisko");
         InputCompany.clear();
         InputCompany.sendKeys("Rc-cloud");
