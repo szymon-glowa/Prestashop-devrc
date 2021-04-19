@@ -21,7 +21,7 @@ public class TestCase5 extends BasePage  {
     private WebElement Search;
 
     @Step("Wyszukanie produktu 'T-shirt'")
-    public TestCase5 SearchTshirt() throws InterruptedException {
+    public TestCase6 SearchTshirt() throws InterruptedException {
 
         InputSearch.clear();
         InputSearch.sendKeys("T-shirt");
@@ -29,8 +29,8 @@ public class TestCase5 extends BasePage  {
 
         Search.click();
         log().info("Kliknięcie w przycisk wyszukaj ");
-        Uspij();
 
-        return this;
+
+        return new TestCase6();
     }
 }

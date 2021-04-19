@@ -5,6 +5,7 @@ import com.github.javafaker.Faker;
 import driver.manager.DriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.Locale;
@@ -18,6 +19,7 @@ public abstract class BasePage {
     public static Faker faker = new Faker(new Locale("pl"));
     public static Random random=new Random();
     public static int rand=random.nextInt(50);
+    JavascriptExecutor js = (JavascriptExecutor)DriverManager.getWebDriver();
 
     public static String getFakerFirstName() {
         String firstname=faker.name().firstName();
@@ -42,10 +44,8 @@ public abstract class BasePage {
         return logger;
     }
 
-   public  WaitForElement waitForElement = new WaitForElement();
-
     public void Uspij() throws InterruptedException {
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(5);
     }
 
 

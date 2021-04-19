@@ -19,10 +19,10 @@ public class TestCase6 extends BasePage {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
     private WebElement SignIn;
 
-    @FindBy(xpath = "//*[@id=\"content\"]/div/a")
+    @FindBy(xpath = "//a[contains(text(),'Nie masz konta? Załóż je tutaj')]")
     private WebElement CreateAnAccount;
 
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[1]/div[1]/label[1]")
+    @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/section[1]/div[1]/div[1]/label[1]")
     private WebElement SpanChooseMan;
 
     @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[2]/div[1]/input")
@@ -58,13 +58,13 @@ public class TestCase6 extends BasePage {
 
     @Step("Rejestracja użytkownika")
     public TestCase7 UserRegistration(String email, String password) throws InterruptedException {
-
+        Uspij();
         SignIn.click();
         log().info("Przejśćie do logowania");
-
+        Uspij();
         CreateAnAccount.click();
         log().info("Przejśćie do rejestracji");
-
+        Uspij();
         SpanChooseMan.click();
         log().info("Wybór pola 'Nazwa kontaktu' -> 'Pan'");
 
@@ -100,7 +100,7 @@ public class TestCase6 extends BasePage {
         CheckTheOptions4.click();
         log().info("Zaznaczenie opcji 'Akceptuje ogólne..' ");
 
-        Uspij();
+
         ButtonSend.click();
         log().info("Zaznaczenie przycisku 'Zapisz' ");
         return new TestCase7();

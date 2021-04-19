@@ -15,7 +15,7 @@ public class TestCase7 extends BasePage  {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
     private WebElement SignIn;
 
-    @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[1]/div[1]/input")
+    @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[1]/section[1]/section[1]/section[1]/form[1]/section[1]/div[1]/div[1]/input[1]")
     private WebElement InputLoginEmail;
 
     @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[2]/div[1]/div/input")
@@ -25,25 +25,25 @@ public class TestCase7 extends BasePage  {
     private WebElement ButtonSignIn;
 
     @Step("Logowanie użytkownika")
-    public TestCase7 UserLogin(String email, String password) throws InterruptedException {
+    public TestCase8 UserLogin(String email, String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
 
         SignIn.click();
         log().info("Przejśćie do logowania");
-        WaitForElement.waitUntilElementIsVisible(InputLoginEmail);
+
         InputLoginEmail.clear();
         InputLoginEmail.sendKeys(email);
         log().info("Wpisujemy w pole logowania 'E-mail'");
-        Uspij();
+
         InputLoginPassword.clear();
         InputLoginPassword.sendKeys(password);
         log().info("Wpisujemy w pole logowania 'Hasło' -> 'haslo1234'");
-        Uspij();
+
         ButtonSignIn.click();
         log().info("Kliknięcie przycisku 'ZALOGUJ SIĘ'");
-        Uspij();
 
-        return this;
+
+        return new TestCase8();
     }
 }

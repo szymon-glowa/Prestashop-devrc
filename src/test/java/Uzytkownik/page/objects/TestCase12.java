@@ -16,11 +16,11 @@ import org.openqa.selenium.support.ui.Select;
 public class TestCase12 extends BasePage {
     @FindBy(xpath = "//*[@id=\"category-3\"]/a")
     private WebElement clothes;
-    @FindBy(xpath = "//*[@id=\"js-product-list\"]/div[1]/div[1]/article/div/a/img")
+    @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[2]/section[1]/section[1]/div[3]/div[1]/div[1]/div[2]/article[1]/div[1]/a[1]/img[1]")
     private WebElement HummingbirdPrintedTShirt;
     @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
     private WebElement AddToCart;
-    @FindBy(xpath = "//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")
+    @FindBy(xpath = "//body/div[@id='blockcart-modal']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/a[1]")
     private WebElement GoToOrder;
     @FindBy(xpath = "//*[@id=\"main\"]/div/div[2]/div[1]/div[2]/div/a")
     private WebElement GoToOrderAgain;
@@ -66,7 +66,7 @@ public class TestCase12 extends BasePage {
     private WebElement InputPhone;
     @FindBy(xpath = "//*[@id=\"delivery-address\"]/div/footer/button")
     private WebElement ButtonNext2;
-    @FindBy(xpath = "//*[@id=\"delivery_message\"]")
+    @FindBy(xpath = "//textarea[@id='delivery_message']")
     private WebElement TextAreaComment;
     @FindBy(xpath = "//*[@id=\"js-delivery\"]/button")
     private WebElement ButtonNext3;
@@ -89,7 +89,7 @@ public class TestCase12 extends BasePage {
         log().info("Kliknięcie w koszulke 'Hummingbird Printed T-Shirt'");
         AddToCart.click();
         log().info("Dodanie koszulki do koszyka");
-        WaitForElement.waitUntilElementIsVisible(GoToOrder);
+        Uspij();
         GoToOrder.click();
         log().info("Kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
         GoToOrderAgain.click();
@@ -119,6 +119,7 @@ public class TestCase12 extends BasePage {
         ButtonNext.click();
         log().info("Kliknięcie w przycisk 'Dalej'");
 
+        Uspij();
         InputAlias.clear();
         InputAlias.sendKeys("poczta.email@poczta.pl");
         log().info("Wpisujemy Alias");
@@ -160,10 +161,12 @@ public class TestCase12 extends BasePage {
         log().info("Wpisujemy komentarz pod sposobem dostawy");
         ButtonNext3.click();
         log().info("Klikamy w przycisk 'Dalej'");
+
         PaymentCheck.click();
         log().info("Klikamy 'Zapłać czekiem'");
         ButtonAgree.click();
         log().info("Klikamy w przycisk 'Zgadzam się z ..'");
+
         ButtonSubmitYourOrder.click();
         log().info("Klikamy w przycisk 'Złóż zamówienie'");
         return this;

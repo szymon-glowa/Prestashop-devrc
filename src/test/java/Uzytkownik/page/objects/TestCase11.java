@@ -7,6 +7,7 @@ import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +31,9 @@ public class TestCase11 extends BasePage {
     private WebElement ChooseVariant;
     @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
     private WebElement AddToCart;
-    @FindBy(xpath = "//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a")
+    @FindBy(xpath = "//body/div[@id='blockcart-modal']/div[1]/div[1]/div[2]/div[1]")
+    private WebElement DivRow;
+    @FindBy(xpath = "//body/div[@id='blockcart-modal']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/a[1]")
     private WebElement GoToOrder;
     @FindBy(xpath = "//*[@id=\"main\"]/div/div[2]/div[1]/div[2]/div/a")
     private WebElement GoToOrderAgain;
@@ -38,11 +41,11 @@ public class TestCase11 extends BasePage {
     private WebElement ButtonNext2;
     @FindBy(xpath = "//*[@id=\"delivery_option_2\"]")
     private WebElement ChooseMyCarrier;
-    @FindBy(xpath = "//*[@id=\"delivery_message\"]")
+    @FindBy(xpath = "//textarea[@id='delivery_message']")
     private WebElement TextAreaComment;
     @FindBy(xpath = "//*[@id=\"js-delivery\"]/button")
     private WebElement ButtonNext3;
-    @FindBy(xpath = "//*[@id=\"payment-option-2\"]")
+    @FindBy(xpath = "//input[@id='payment-option-2']")
     private WebElement PaymentTransfer;
     @FindBy(xpath = "//*[@id=\"conditions_to_approve[terms-and-conditions]\"]")
     private WebElement ButtonAgree;
@@ -52,11 +55,11 @@ public class TestCase11 extends BasePage {
     private WebElement LogOut;
 
     @Step("Próba zakup produktu prostego [Zakup jako zalogowany]")
-    public TestCase11 ProductPurchaseAsLoggedUser(String email,String password) throws InterruptedException {
+    public TestCase12 ProductPurchaseAsLoggedUser(String email,String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
         SignIn.click();
-        log().info("Przejśćie do logowania");
+
         InputLoginEmail.clear();
         InputLoginEmail.sendKeys(email);
         log().info("Wpisujemy w pole logowania 'E-mail'");
@@ -73,13 +76,12 @@ public class TestCase11 extends BasePage {
         log().info("Wybranie wariantu : kolor -> Czarny");
         AddToCart.click();
         log().info("Dodanie koszulki do koszyka");
-        WaitForElement.waitUntilElementIsVisible(GoToOrder);
+        Uspij();
         GoToOrder.click();
         log().info("Kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
-        WaitForElement.waitUntilElementIsVisible(GoToOrderAgain);
+        Uspij();
         GoToOrderAgain.click();
         log().info("Ponowne kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
-        WaitForElement.waitUntilElementIsVisible(ButtonNext2);
         ButtonNext2.click();
         log().info("Klikamy w przycisk 'Dalej'");
         ChooseMyCarrier.click();
@@ -89,13 +91,15 @@ public class TestCase11 extends BasePage {
         log().info("Wpisujemy komentarz pod sposobem dostawy");
         ButtonNext3.click();
         log().info("Klikamy w przycisk 'Dalej'");
+        Uspij();
         PaymentTransfer.click();
         log().info("Klikamy 'Zapłać przelewem'");
         ButtonAgree.click();
         log().info("Klikamy w przycisk 'Zgadzam się z ..'");
+
         ButtonSubmitYourOrder.click();
         log().info("Klikamy w przycisk 'Złóż zamówienie'");
 
-        return this;
+        return new TestCase12();
     }
 }
