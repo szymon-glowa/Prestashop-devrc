@@ -1,20 +1,12 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.tests.TestBase;
-import Uzytkownik.waits.WaitForElement;
-import driver.manager.DriverManager;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Parameters;
 
 
-public class TestCase6 extends BasePage {
+public class UserRegistration extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
     private WebElement SignIn;
@@ -57,7 +49,7 @@ public class TestCase6 extends BasePage {
 
 
     @Step("Rejestracja użytkownika")
-    public TestCase7 UserRegistration(String email, String password) throws InterruptedException {
+    public UserLogin UserRegistration(String email, String password) throws InterruptedException {
         Uspij();
         SignIn.click();
         log().info("Przejśćie do logowania");
@@ -103,7 +95,7 @@ public class TestCase6 extends BasePage {
 
         ButtonSend.click();
         log().info("Zaznaczenie przycisku 'Zapisz' ");
-        return new TestCase7();
+        return new UserLogin();
 
     }
 }

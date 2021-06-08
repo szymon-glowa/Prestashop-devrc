@@ -1,46 +1,31 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.tests.TestBase;
 import Uzytkownik.waits.WaitForElement;
-import driver.manager.DriverManager;
-import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class TestCase12 extends BasePage {
+
+public class PurchaseAndLogin extends BasePage {
     @FindBy(xpath = "//*[@id=\"category-3\"]/a")
     private WebElement clothes;
     @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[2]/section[1]/section[1]/div[3]/div[1]/div[1]/div[2]/article[1]/div[1]/a[1]/img[1]")
     private WebElement HummingbirdPrintedTShirt;
-    @FindBy(xpath = "//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button")
+    @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[2]/form[1]/div[2]/div[1]/div[2]/button[1]")
     private WebElement AddToCart;
-    @FindBy(xpath = "//body/div[@id='blockcart-modal']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/a[1]")
+    @FindBy(xpath = "//a[contains(text(),'Przejdź do realizacji zamówienia')]")
     private WebElement GoToOrder;
     @FindBy(xpath = "//*[@id=\"main\"]/div/div[2]/div[1]/div[2]/div/a")
     private WebElement GoToOrderAgain;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[1]/div[1]/label[1]")
-    private WebElement ChooseSex;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[2]/div[1]/input")
-    private WebElement InputFirstName1;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[3]/div[1]/input")
-    private WebElement InputLastName1;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[4]/div[1]/input")
-    private WebElement InputEmial;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[5]/div[1]/div/input")
-    private WebElement InputPassword;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[6]/div[1]/input")
-    private WebElement InputDateOfBirth;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[8]/div[1]/span/label/input")
-    private WebElement ClickMessages;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/section/div[10]/div[1]/span/label/input")
-    private WebElement ClickAccept;
-    @FindBy(xpath = "//*[@id=\"customer-form\"]/footer/button")
+    @FindBy(xpath = "//*[@id=\"checkout-personal-information-step\"]/div/ul/li[3]/a")
+    private WebElement SignIn;
+    @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[1]/div[1]/input")
+    private WebElement InputTypeEmail;
+    @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[2]/div[1]/div/input")
+    private WebElement InputTypePassword;
+    @FindBy(xpath = "//*[@id=\"login-form\"]/footer/button")
     private WebElement ButtonNext;
     @FindBy(xpath = "//*[@id=\"delivery-address\"]/div/section/div[1]/div[1]/input")
     private WebElement InputAlias;
@@ -79,8 +64,8 @@ public class TestCase12 extends BasePage {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[1]")
     private WebElement LogOut;
 
-    @Step("Próba zakup produktu prostego [Zakup i rejestracja podczas zakupu]")
-    public TestCase12 ProductPurchaseAsGuestWithRegistration(String email2,String password) throws InterruptedException {
+    @Step("Próba zakup produktu prostego [Zakup i zalogowanie przy kupowaniu]")
+    public PurchaseAsAGuest ProductPurchaseWithLogin(String email, String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
         clothes.click();
@@ -92,34 +77,21 @@ public class TestCase12 extends BasePage {
         Uspij();
         GoToOrder.click();
         log().info("Kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
+        Uspij();
         GoToOrderAgain.click();
         log().info("Ponowne kliknięcie w przycisk 'Przejdź do realizacji zamówienia'");
-
-        ChooseSex.click();
-        log().info("Wybranie nazwy kontatku 'Pan'");
-        InputFirstName1.clear();
-        InputFirstName1.sendKeys("Jan");
-        log().info("Wpisujemy Imię");
-        InputLastName1.clear();
-        InputLastName1.sendKeys("Kowalski");
-        log().info("Wpisujemy Nazwisko");
-        InputEmial.clear();
-        InputEmial.sendKeys(email2);
-        log().info("Wpisujemy adres");
-        InputPassword.clear();
-        InputPassword.sendKeys(password);
+        SignIn.click();
+        log().info("kliknięcie w zakładke 'Zaloguj się'");
+        InputTypeEmail.clear();
+        InputTypeEmail.sendKeys(email);
+        log().info("Wpisujemy email");
+        InputTypePassword.clear();
+        InputTypePassword.sendKeys(password);
         log().info("Wpisujemy hasło");
-        InputDateOfBirth.clear();
-        InputDateOfBirth.sendKeys("1971-04-14");
-        log().info("Wpisujemy date urodzenia");
-        ClickMessages.click();
-        log().info("Zaznaczenie opcji 'Wiadomość o przetwarzaniu danych..'");
-        ClickAccept.click();
-        log().info("Zaznaczenie opcji 'Akcpetuje ogólne warunki'");
         ButtonNext.click();
-        log().info("Kliknięcie w przycisk 'Dalej'");
-
+        log().info("Klikamy w przycisk 'Dalej'");
         Uspij();
+        //WaitForElement.waitUntilElementIsVisible(InputAlias);
         InputAlias.clear();
         InputAlias.sendKeys("poczta.email@poczta.pl");
         log().info("Wpisujemy Alias");
@@ -166,9 +138,9 @@ public class TestCase12 extends BasePage {
         log().info("Klikamy 'Zapłać czekiem'");
         ButtonAgree.click();
         log().info("Klikamy w przycisk 'Zgadzam się z ..'");
-
         ButtonSubmitYourOrder.click();
         log().info("Klikamy w przycisk 'Złóż zamówienie'");
-        return this;
+
+        return new PurchaseAsAGuest();
     }
 }

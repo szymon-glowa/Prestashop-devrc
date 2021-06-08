@@ -1,19 +1,14 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.tests.TestBase;
 import Uzytkownik.waits.WaitForElement;
-import driver.manager.DriverManager;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class TestCase8 extends BasePage  {
+public class ValidationContactForm extends BasePage  {
     @FindBy(xpath = "/html/body/main/header/nav/div/div/div[1]/div[1]/div/div/a")
     private WebElement Contact;
     @FindBy(xpath = "//body/main[1]/section[1]/div[1]/div[2]/section[1]/section[1]/section[1]/form[1]/section[1]/div[2]/div[1]/select[1]")
@@ -26,7 +21,7 @@ public class TestCase8 extends BasePage  {
     private WebElement ButtonSend;
 
     @Step("Walidacja formularza kontaktowego")
-    public TestCase9 ContactForm(String email) throws InterruptedException {
+    public PurchaseAndLogin ContactForm(String email) throws InterruptedException {
         Contact.click();
         log().info("Przejście do formularza kontaktowego");
         Select selectOptions = new Select(TopicSelector);
@@ -41,7 +36,7 @@ public class TestCase8 extends BasePage  {
         log().info("Wpisujemy w pole 'Wiadomość' -> 'Wiadomość tekstowa'");
         ButtonSend.click();
         log().info("Wysłanie formularza kontaktowego");
-        return new TestCase9();
+        return new PurchaseAndLogin();
 
     }
 }

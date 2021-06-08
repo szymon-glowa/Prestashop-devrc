@@ -18,7 +18,7 @@ public abstract class BasePage {
 
     public static Faker faker = new Faker(new Locale("pl"));
     public static Random random=new Random();
-    public static int rand=random.nextInt(50);
+    public static int rand=random.nextInt(500);
     JavascriptExecutor js = (JavascriptExecutor)DriverManager.getWebDriver();
 
     public static String getFakerFirstName() {

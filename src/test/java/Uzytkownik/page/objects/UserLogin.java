@@ -1,14 +1,12 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.waits.WaitForElement;
 import io.qameta.allure.Step;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.Parameters;
 
 
-public class TestCase7 extends BasePage  {
+public class UserLogin extends BasePage  {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a[1]")
     private WebElement LogOut;
 
@@ -25,7 +23,7 @@ public class TestCase7 extends BasePage  {
     private WebElement ButtonSignIn;
 
     @Step("Logowanie użytkownika")
-    public TestCase8 UserLogin(String email, String password) throws InterruptedException {
+    public ValidationContactForm UserLogin(String email, String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
 
@@ -44,6 +42,6 @@ public class TestCase7 extends BasePage  {
         log().info("Kliknięcie przycisku 'ZALOGUJ SIĘ'");
 
 
-        return new TestCase8();
+        return new ValidationContactForm();
     }
 }

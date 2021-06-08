@@ -1,20 +1,11 @@
 package Uzytkownik.page.objects;
 
-import Uzytkownik.tests.TestBase;
-import Uzytkownik.waits.WaitForElement;
-import driver.manager.DriverManager;
-import driver.manager.DriverUtils;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-public class TestCase11 extends BasePage {
+public class PurchaseAsLogged extends BasePage {
     @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
     private WebElement SignIn;
     @FindBy(xpath = "//*[@id=\"login-form\"]/section/div[1]/div[1]/input")
@@ -55,7 +46,7 @@ public class TestCase11 extends BasePage {
     private WebElement LogOut;
 
     @Step("Próba zakup produktu prostego [Zakup jako zalogowany]")
-    public TestCase12 ProductPurchaseAsLoggedUser(String email,String password) throws InterruptedException {
+    public PurchaseAndRegistrationDuringPurchase ProductPurchaseAsLoggedUser(String email, String password) throws InterruptedException {
         LogOut.click();
         log().info("Wylogowanie się");
         SignIn.click();
@@ -100,6 +91,6 @@ public class TestCase11 extends BasePage {
         ButtonSubmitYourOrder.click();
         log().info("Klikamy w przycisk 'Złóż zamówienie'");
 
-        return new TestCase12();
+        return new PurchaseAndRegistrationDuringPurchase();
     }
 }

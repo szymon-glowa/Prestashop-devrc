@@ -1,7 +1,6 @@
 package Uzytkownik.tests;
 
 import Uzytkownik.page.objects.*;
-import driver.manager.BrowserType;
 import driver.manager.DriverUtils;
 import io.qameta.allure.Description;
 import org.testng.annotations.Optional;
@@ -38,14 +37,14 @@ public class AllTests extends TestBase {
                 email2=BasePage.getFakerEmail();
             }
         }
-        TestCase1 testCase1 = new TestCase1();
-        TestCase6 testCase6 = new TestCase6();
-        TestCase8 testCase8 = new TestCase8();
-        TestCase9 testCase9 = new TestCase9();
-        TestCase10 testCase10 = new TestCase10();
-        TestCase11 testCase11 = new TestCase11();
-        TestCase12 testCase12 = new TestCase12();
-        testCase1
+        HomePage homePage = new HomePage();
+        UserRegistration userRegistration = new UserRegistration();
+        ValidationContactForm validationContactForm = new ValidationContactForm();
+        PurchaseAndLogin purchaseAndLogin = new PurchaseAndLogin();
+        PurchaseAsAGuest purchaseAsAGuest = new PurchaseAsAGuest();
+        PurchaseAsLogged purchaseAsLogged = new PurchaseAsLogged();
+        PurchaseAndRegistrationDuringPurchase purchaseAndRegistrationDuringPurchase = new PurchaseAndRegistrationDuringPurchase();
+        homePage
                 .ClickOnTheHomePage()
                 .ClickOnTheClothes()
                 .ClickOnTheProduct()
