@@ -1,0 +1,1 @@
+Testy dotyczą projektu Prestashop.
