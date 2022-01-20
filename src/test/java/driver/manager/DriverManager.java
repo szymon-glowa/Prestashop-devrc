@@ -1,11 +1,13 @@
 package driver.manager;
 
+import Uzytkownik.configuration.TestRunProperties;
 import driver.manager.BrowserFactory;
 import driver.manager.BrowserType;
 import driver.manager.listeners.WebDriverEventListenerRegistrar;
 import org.openqa.selenium.WebDriver;
 
 import static Uzytkownik.configuration.TestRunProperties.getBrowserToRun;
+import static Uzytkownik.configuration.TestRunProperties.getIsRemoteRun;
 import static driver.manager.BrowserType.FIREFOX;
 
 
@@ -13,7 +15,6 @@ public class DriverManager {
 
     private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
     private static ThreadLocal<BrowserType> browserTypeThreadLocal = new ThreadLocal<>();
-
     private DriverManager() {
     }
 
@@ -22,9 +23,9 @@ public class DriverManager {
         WebDriver browser = null;
         if (browserType == null) {
             browserType = getBrowserToRun();
-            browser = new BrowserFactory(browserType).getBrowser();
+            browser = new BrowserFactory(browserType, getIsRemoteRun()).getBrowser();
         } else {
-            browser = new BrowserFactory(browserType).getBrowser();
+            browser = new BrowserFactory(browserType, getIsRemoteRun()).getBrowser();
         }
 
         browserTypeThreadLocal.set(browserType);
@@ -39,7 +40,6 @@ public class DriverManager {
         if (webDriverThreadLocal.get() == null) {
             throw new IllegalStateException("WebDriver Instance was null! Please create instance of WebDriver using setWebDriver!");
         }
-
         return webDriverThreadLocal.get();
     }
 
