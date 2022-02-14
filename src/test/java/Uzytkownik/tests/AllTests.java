@@ -38,12 +38,6 @@ public class AllTests extends TestBase {
             }
         }
         HomePage homePage = new HomePage();
-        UserRegistration userRegistration = new UserRegistration();
-        ValidationContactForm validationContactForm = new ValidationContactForm();
-        PurchaseAndLogin purchaseAndLogin = new PurchaseAndLogin();
-        PurchaseAsAGuest purchaseAsAGuest = new PurchaseAsAGuest();
-        PurchaseAsLogged purchaseAsLogged = new PurchaseAsLogged();
-        PurchaseAndRegistrationDuringPurchase purchaseAndRegistrationDuringPurchase = new PurchaseAndRegistrationDuringPurchase();
         homePage
                 .ClickOnTheHomePage()
                 .ClickOnTheClothes()

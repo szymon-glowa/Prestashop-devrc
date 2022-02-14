@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class BasePage {
 
+    //pole log4j
     private Logger logger = LogManager.getLogger(this.getClass().getName());
 
     public static Faker faker = new Faker(new Locale("pl"));
@@ -36,6 +37,8 @@ public abstract class BasePage {
         return email;
     }
 
+    //musimy użyć implementacji metody initElements(), która jako argumenty przyjmuje WebDriver oraz obiekt strony
+    //jest to potrzebne ponieważ używamy PageFactory czyli  @FindBy
     public BasePage() {
         PageFactory.initElements(DriverManager.getWebDriver(), this);
     }

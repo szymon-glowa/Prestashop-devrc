@@ -13,17 +13,18 @@ import java.util.Properties;
 
 public class PropertiesLoader {
     private Logger logger= LogManager.getLogger(PropertiesLoader.class);
-
+    //W klasie znajduje się tylko jedna metoda. Służy ona do odczytywania właściwości z zadanego pliku properties
     public Properties getPropertiesFromFile(String propertiesFileName){
+        //Tworzymy obiekt InputStream, który posłuży nam  do odczytania pliku properties
         InputStream inputStream =null;
-
+        //Obiekt Properties będzie przechowywał właściwości
         Properties properties=new Properties();
         try
         {
             logger.info("Trying to load properties with file name: " + propertiesFileName);
-
+            //Odczytujemy plik properties i inicjalizujemy obiekt inputStream
             inputStream=getClass().getClassLoader().getResourceAsStream(propertiesFileName);
-
+            //Ładujemy properties w formie InputStream do właściwego obiektu typu Properties
             if(inputStream!=null){
                 properties.load(inputStream);
                 logger.info("Successfully loaded properties for file: " + propertiesFileName);

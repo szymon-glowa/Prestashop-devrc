@@ -14,7 +14,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class TestBase {
-
+    //wykona nam się kod w ramach tej metody przed wykonaniem dowolnie innej metody z adnotacją @BeforeMethod
     @Step("Ładowanie konfiguracji z configuration.properties")
     @BeforeClass
     public void beforeClass() {
@@ -32,7 +32,6 @@ public class TestBase {
         DriverManager.getWebDriver();
         DriverUtils.setInitialConfiguration();
         DriverUtils.navigateTo(APPLICATION_URL);
-        DriverManager.getWebDriver().navigate().to(DriverManager.getWebDriver().getCurrentUrl());
     }
 
     @Step("Utylizacja przeglądarki")

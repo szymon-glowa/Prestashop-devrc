@@ -35,6 +35,7 @@ public class DriverManager {
         webDriverThreadLocal.set(browser);
     }
 
+    //tworzy instancje WebDrivera i dostarcza ją do testow
     public static WebDriver getWebDriver() {
 
         if (webDriverThreadLocal.get() == null) {

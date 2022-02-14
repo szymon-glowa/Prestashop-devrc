@@ -19,7 +19,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserFactory {
-
+    //w tej klasie zaszyjemy implementację wyboru przeglądarki.
+    
     private static final String MESSAGE_UNKNOWN_BROWSER = "Unknown browser type! Please check your configuration";
 
     //Pole określające typ przeglądarki
@@ -32,12 +33,6 @@ public class BrowserFactory {
     public BrowserFactory(BrowserType browserType, boolean isRemoteRun) {
         this.browserType = browserType;
         this.isRemoteRun = isRemoteRun;
-    }
-
-    //Konstruktor dla klasy, który ustawia wartości pól browserType or isRemoteRun
-    public BrowserFactory(BrowserType browserType ){
-
-        this.browserType = browserType;
     }
 
     //Metoda dostarcza obiekt WebDrivera
@@ -91,6 +86,7 @@ public class BrowserFactory {
         }
 
     }
+
     //Metoda zwraca nam obiekt RemoteWebDrivera na podstawie obiektu desiredCapabilities
     private WebDriver getRemoteWebDriver(DesiredCapabilities desiredCapabilities) {
         RemoteWebDriver remoteWebDriver = null;
